@@ -69,11 +69,12 @@
         }
 
         function updateProgressBar() {
-            var progressBar = document.querySelector('.text');
+            var progressBar = document.querySelector('.progress-bar');
             var percentage = getTimePercentage();
             progressBar.style.width = percentage + '%';
             progressBar.setAttribute('aria-valuenow', percentage);
-            progressBar.textContent = percentage + '%';
+            var text = document.querySelector('.text');
+            text.textContent = percentage + '%';
         }
 
         // Update the progress bar every second
